@@ -111,7 +111,7 @@ class CustomerController extends Controller
         'attachments'
     ]);
     Customer::whereId($id)->update($updateData);
-    return redirect('/customers')->with('ourMessage', 'Klant is geupdated');
+    return redirect('/customers')->with('ourMessage', 'Klant is aangepast');
     }
 
     /**

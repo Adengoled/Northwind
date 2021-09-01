@@ -20,6 +20,26 @@ Lijst alle producten
     border: #262626 1px solid;
   }
 
+  tr:hover {
+    cursor: pointer;
+  }
+
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  tr:hover .hidden {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  button {
+    margin: 5px;
+  }
+
 </style>
 
 <div class="push-top">
@@ -50,12 +70,14 @@ Lijst alle producten
             <td>{{$customers->email_address}}</td>
             <td>{{$customers->business_phone}}</td>
             <td class="text-center">
-                <a href="{{ route('customers.edit', $customers->id)}}" class="btn btn-turq btn-sm"><i class="far fa-edit"></i></a>
-                <form action="{{ route('customers.destroy', $customers->id)}}" method="post" style="display: inline-block">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger btn-sm" type="submit"><i class="far fa-trash-alt"></i></button>
+              <div class="d-inline-flex hidden">
+                <button class="btn btn-turq btn-sm"><a href="{{ route('customers.edit', $customers->id)}}"><i class="far fa-edit"></i></a></button>
+                <form action="{{ route('customers.destroy', $customers->id)}}" method="post">
+                 @csrf
+                 @method('DELETE')
+                <button class="btn btn-danger btn-sm" type="submit"><i class="far fa-trash-alt"></i></button>
                 </form>
+              </div>
             </td>
         </tr>
         @endforeach

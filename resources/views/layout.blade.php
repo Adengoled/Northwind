@@ -20,13 +20,15 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
   rel="stylesheet"
 />
+<!--APP-CSS-->
+<link href="css/app.css" rel="stylesheet">
    </head>
    <body>
       <header>
          @include('header')
       </header>
 
-      <div class="container">
+      <div class="container" id="maincontent">
          @yield('content')
       </div>
 
