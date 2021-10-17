@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,15 @@ Route::get('/', function () {
 });
 
 Route::resource('customers', CustomerController::class);
+
+// Route::get('/products', function () {
+//     return view('products', [ProductController::class, 'index']);
+// })->name('products');
+
+Route::get('/products',[ProductController::class,'index'])->name('products');
+
+Route::get('/orders', [OrderController::class, 'index'])->name('orders');
+
+Route::get('/productnames', [ProductController::class, 'productnames'])->name('productnames');
+
+

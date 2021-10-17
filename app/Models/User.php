@@ -8,6 +8,7 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Laratrust\Traits\LaratrustUserTrait;
 
 /**
  * Class User
@@ -25,6 +26,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class User extends Model
 {
+	use LaratrustUserTrait;
 	protected $table = 'users';
 
 	protected $dates = [

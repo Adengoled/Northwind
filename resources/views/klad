@@ -1,0 +1,12 @@
+                                                <!-- <td class="px-6 py-4 text-sm text-gray-500">                        
+                                                    <div class="btn-group onhover" role="group" aria-label="Actions">
+                                                        <a href="{{ route('customers.edit', $customers->id)}}">
+                                                            <button type="button" class="btn btn-primary">
+                                                                <i class="far fa-edit fa-lg">Edit</i>
+                                                            </button>
+                                                        </a>
+                                                        <button type="button" class="btn btn-outline-danger ">
+                                                            <i class="far fa-trash-alt fa-lg">Delete</i>
+                                                        </button>
+                                                    </div>
+                                                </td> 
